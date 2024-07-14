@@ -5,7 +5,7 @@ export const Container = styled.div`
   height: 100vh;
 
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 116px auto;
   grid-template-areas:
   "header"
   "content";
@@ -13,6 +13,7 @@ export const Container = styled.div`
 
 > main {
     max-width: 1137px;
+    max-height: 537px;
     margin: 0 auto;
     padding: 40px 106px 156px 123px;
 
@@ -21,14 +22,15 @@ export const Container = styled.div`
 
     &::-webkit-scrollbar {
       width: 8px;
+      height: 8px;
     }
 
     &::-webkit-scrollbar-thumb {
       background-color: ${({ theme }) => theme.COLORS.PINK};
       border-radius: 8px;
     }
-  }
 
+  }
 
    header {
     margin-bottom: 24px;
@@ -44,6 +46,7 @@ export const Content = styled.div`
 
    > h1 {
     font-size: 38px;
+    font-weight: 500;
    }
 `;
 
@@ -58,7 +61,7 @@ export const Info = styled.div`
     align-items: center;
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
 
     img {
@@ -71,7 +74,7 @@ export const Info = styled.div`
   > span {
     display: flex;
     align-items: center;
-    font-size: 14px;
+    font-size: 16px;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
 
      svg {
@@ -89,7 +92,7 @@ export const Section = styled.div`
 export const Description = styled.div`
 
   p{
-    font-size: 14px;
+    font-size: 16px;
     color: ${({ theme }) => theme.COLORS.GRAY_100};
     text-align: justify;
   }
