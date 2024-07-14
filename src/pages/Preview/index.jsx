@@ -19,8 +19,8 @@ export function Preview() {
 
         </header>
         <Content>
-          <h1>Pulp Fiction</h1>
-          <Rating isBigSize grade={5} />
+          <h1>Gladiador</h1>
+          <Rating isBigSize grade={4} />
         </Content>
 
         <Info>
@@ -48,37 +48,7 @@ export function Preview() {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>   <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>   <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>   <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>   <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>   <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>
+
         </Description>
 
 
