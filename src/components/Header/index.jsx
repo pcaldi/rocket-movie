@@ -1,4 +1,8 @@
-import { Container, Brand, Search, Profile } from "./styles";
+import { Container, Brand, Profile } from "./styles";
+
+import { LuSearch } from "react-icons/lu"
+
+import { Input } from "../Input";
 
 
 export function Header() {
@@ -8,9 +12,8 @@ export function Header() {
         <h1>RocketMovies</h1>
       </Brand>
 
-      <Search>
-        <input type="text" placeholder="Pesquisar filmes..." />
-      </Search>
+      <Input icon={LuSearch} placeholder="Pesquise pelo título" />
+
 
       <Profile>
         <div className="profile">
@@ -23,6 +26,8 @@ export function Header() {
           alt="Foto do usuário"
         />
       </Profile>
+
+
     </Container>
   )
 }

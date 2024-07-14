@@ -4,12 +4,13 @@ export const Container = styled.div`
   width: 100%;
   height: 116px;
 
+  grid-area: header;
+
   border-bottom: 1px solid ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
   display: flex;
   align-items:center ;
   justify-content: space-between;
-
   padding: 30px 0;
 
 `;
@@ -24,7 +25,6 @@ export const Brand = styled.div`
 
 export const Search = styled.div`
 
-
 `;
 
 export const Profile = styled.div`
@@ -32,11 +32,10 @@ export const Profile = styled.div`
   align-items: center;
 
   .profile{
-
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-right: 9px;
+    align-items: end;
+    margin-right: 12px;
   }
 
  img {
@@ -48,13 +47,15 @@ export const Profile = styled.div`
  }
 
  p {
-  font-size: 14px;
-  font-weight: 700;
+    font-size: 14px;
+    font-weight: 700;
+    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    margin-bottom: 4px; /* Adicione uma margem inferior para separar o texto do link */
  }
 
- a {
+  a {
   font-size: 14px;
-  color: ${({ theme }) => theme.COLORS.GRAY_300}
+  color: ${({ theme }) => theme.COLORS.GRAY_200};
  }
 
 `;
