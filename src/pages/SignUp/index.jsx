@@ -2,9 +2,10 @@ import { LuMail, LuLock, LuUser, LuArrowLeft } from "react-icons/lu"
 
 import { Input } from "../../components/Input"
 import { Button } from "../../components/Button"
-import { ButtonText } from "../../components/ButtonText"
+
 
 import { BackgroundImage, Container, Form } from "./styles";
+import { Link } from "react-router-dom";
 
 export function SignUp() {
   return (
@@ -36,10 +37,10 @@ export function SignUp() {
         <Button title="Cadastrar" />
 
         <footer>
-          <ButtonText
-            title="Voltar para o login"
-            icon={LuArrowLeft}
-          />
+          <Link to="/">
+            <LuArrowLeft />
+            Voltar para o login
+          </Link>
         </footer>
 
 

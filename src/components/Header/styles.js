@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.div`
@@ -28,7 +29,7 @@ export const Search = styled.div`
 
 `;
 
-export const Profile = styled.div`
+export const Profile = styled(Link)`
   display: flex;
   align-items: center;
 
@@ -48,6 +49,7 @@ export const Profile = styled.div`
  }
 
  p {
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
     font-size: 14px;
     font-weight: 700;
     white-space: nowrap; /* Impede que o texto quebre em várias linhas */

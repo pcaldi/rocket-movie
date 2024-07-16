@@ -15,7 +15,7 @@ export function Header() {
       <Input icon={LuSearch} placeholder="Pesquise pelo título" />
 
 
-      <Profile>
+      <Profile to="/profile">
         <div className="profile">
 
           <p>Paulo Ricardo</p>

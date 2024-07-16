@@ -9,6 +9,7 @@ import { Container, Form } from "./styles";
 
 import { LuArrowLeft } from "react-icons/lu";
 import { Section } from "../../components/Section"
+import { Link } from "react-router-dom"
 
 
 export function New() {
@@ -19,7 +20,9 @@ export function New() {
       <main>
         <Form>
           <header>
-            <ButtonText icon={LuArrowLeft} title="Voltar" />
+            <Link to="/">
+              <ButtonText icon={LuArrowLeft} title="Voltar" />
+            </Link>
             <h1>Novo Filme</h1>
           </header>
 

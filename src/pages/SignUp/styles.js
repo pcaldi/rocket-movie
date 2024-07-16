@@ -45,6 +45,13 @@ export const Form = styled.form`
 
     margin-top: 42px;
 
+    a {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
+
   }
 
 `;

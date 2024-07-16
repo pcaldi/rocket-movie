@@ -5,6 +5,7 @@ import { LuPlus } from "react-icons/lu"
 import { Header } from "../../components/Header";
 import { Button } from "../../components/Button";
 import { Movie } from "../../components/Movie";
+import { Link } from "react-router-dom";
 
 export function Home() {
   return (
@@ -13,9 +14,9 @@ export function Home() {
       <main>
         <header>
           <h1>Meus Filmes</h1>
-          <div>
+          <Link to="/new">
             <Button icon={LuPlus} title="Adicionar Filme" />
-          </div>
+          </Link>
 
         </header>
 

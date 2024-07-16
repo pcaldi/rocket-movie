@@ -5,13 +5,16 @@ import { Button } from "../../components/Button"
 import { ButtonText } from "../../components/ButtonText"
 
 import { Container, Avatar, Form } from "./styles";
+import { Link } from "react-router-dom";
 
 
 export function Profile() {
   return (
     <Container>
       <header>
-        <ButtonText title="Voltar" icon={LuArrowLeft} />
+        <Link to="/">
+          <ButtonText title="Voltar" icon={LuArrowLeft} />
+        </Link>
       </header>
 
       <Form>

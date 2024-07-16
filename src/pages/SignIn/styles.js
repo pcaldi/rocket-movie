@@ -43,6 +43,10 @@ export const Form = styled.form`
 
   > footer {
     margin-top: 42px;
+
+    a {
+      color: ${({ theme }) => theme.COLORS.PINK};
+    }
   }
 
 `;
