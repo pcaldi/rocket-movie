@@ -10,6 +10,8 @@ export const Container = styled.button`
 
   gap: 8px;
 
+  font-weight: 500;
+
   background: ${({ theme }) => theme.COLORS.PINK};
   color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
 
