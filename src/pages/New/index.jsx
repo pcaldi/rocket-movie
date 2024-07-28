@@ -24,6 +24,10 @@ export function New() {
     setNewTag("");
   }
 
+  function handleRemoveTag(deleted) {
+    setTags(prevState => prevState.filter(tag => tag !== deleted));
+  }
+
 
   return (
     <Container>
@@ -67,7 +71,7 @@ export function New() {
                   <MovieItem
                     key={String(tag.id)}
                     value={tag}
-                    onClick={() => { }}
+                    onClick={() => handleRemoveTag(tag)}
                   />
                 ))
               }
