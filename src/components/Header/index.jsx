@@ -1,19 +1,17 @@
+/* eslint-disable react/prop-types */
 import { Container, Brand, Profile, Logout } from "./styles";
-
-import { LuSearch } from "react-icons/lu";
 
 import { api } from "../../services/api";
 
 import avatarPlaceholder from "../../assets/placeholder_profile.png";
 
-import { Input } from "../Input";
 import { ButtonText } from "../ButtonText";
 
 import { useAuth } from '../../hooks/auth';
 
 import { useNavigate } from "react-router-dom";
 
-export function Header() {
+export function Header({ children }) {
 
   const { signOut, user } = useAuth();
 
@@ -36,10 +34,7 @@ export function Header() {
         <h1>RocketMovies</h1>
       </Brand>
 
-      <Input
-        icon={LuSearch}
-        placeholder="Pesquise pelo título"
-      />
+      {children}
 
       <Profile to="/profile">
         <div className="profile">

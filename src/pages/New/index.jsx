@@ -69,7 +69,12 @@ export function New() {
 
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input
+          type="text"
+          placeholder="Pesquise pelo título"
+        />
+      </Header>
 
       <main>
         <Form>

@@ -1,17 +1,24 @@
 import { Container, Content, Description, Info, Section } from "./styles"
 
-import { ButtonText } from "../../components/ButtonText"
+import { Tag } from "../../components/Tag"
+import { Input } from "../../components/Input"
 import { Header } from "../../components/Header"
+import { Rating } from "../../components/Rating"
+import { ButtonText } from "../../components/ButtonText"
 
 import { LuArrowLeft, LuClock } from "react-icons/lu"
-import { Rating } from "../../components/Rating"
-import { Tag } from "../../components/Tag"
+
 
 
 export function Preview() {
   return (
     <Container>
-      <Header />
+      <Header>
+        <Input
+          type="text"
+          placeholder="Pesquise pelo título"
+        />
+      </Header>
 
       <main>
         <header>
