@@ -4,6 +4,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   width: 100%;
   height: 116px;
+  position: relative;
 
   grid-area: header;
 
@@ -33,6 +34,7 @@ export const Profile = styled(Link)`
   display: flex;
   align-items: center;
 
+
   .profile{
     display: flex;
     flex-direction: column;
@@ -56,9 +58,12 @@ export const Profile = styled(Link)`
     margin-bottom: 4px; /* Adicione uma margem inferior para separar o texto do link */
  }
 
-  a {
-  font-size: 14px;
-  color: ${({ theme }) => theme.COLORS.GRAY_200};
- }
 
+`;
+
+export const Logout = styled.div`
+  display: flex;
+  position: absolute;
+  top: 70px;
+  right: 77px;
 `;

@@ -1,23 +1,22 @@
-import { Container, Brand, Profile } from "./styles";
+import { Container, Brand, Profile, Logout } from "./styles";
 
 import { LuSearch } from "react-icons/lu"
 
 import { Input } from "../Input";
 
-import { useAuth } from '../../hook/auth';
+import { useAuth } from '../../hooks/auth';
 import { ButtonText } from "../ButtonText";
-
-import { useNavigate } from "react-router-dom";
-
 
 export function Header() {
 
-  const { signOut } = useAuth();
-  const navigate = useNavigate();
+  const { signOut, user } = useAuth();
 
   function handleSignOut() {
-    navigate("/");
-    signOut();
+    const confirm = window.confirm("Tem certeza que deseja sair?");
+
+    if (confirm) {
+      signOut();
+    }
   }
 
   return (
@@ -34,17 +33,21 @@ export function Header() {
       <Profile to="/profile">
         <div className="profile">
 
-          <p>Paulo Ricardo</p>
-          <ButtonText
-            title="Sair"
-            onClick={handleSignOut}
-          />
+          <p>{user.name}</p>
+
         </div>
         <img
           src="https://github.com/pcaldi.png"
           alt="Foto do usuário"
         />
       </Profile>
+
+      <Logout>
+        <ButtonText
+          title="Sair"
+          onClick={handleSignOut}
+        />
+      </Logout>
 
 
     </Container>
