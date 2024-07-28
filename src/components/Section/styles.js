@@ -6,6 +6,6 @@ export const Container = styled.div`
     font-size: 20px;
     font-weight: 400;
 
-    margin: 24px 0;
+    padding: 24px 0;
   }
 `;
