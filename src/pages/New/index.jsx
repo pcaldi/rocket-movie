@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from "../../components/Input"
@@ -13,6 +15,16 @@ import { Link } from "react-router-dom"
 
 
 export function New() {
+  const [tags, setTags] = useState([]);
+  const [newTag, setNewTag] = useState("");
+
+
+  function handleAddTag() {
+    setTags(prevState => [...prevState, newTag]);
+    setNewTag("");
+  }
+
+
   return (
     <Container>
       <Header />
@@ -50,8 +62,22 @@ export function New() {
           <Section title="Marcadores">
             <div className="tags">
 
-              <MovieItem value="Ação" />
-              <MovieItem isnew placeholder="Novo marcador" />
+              {
+                tags.map((tag) => (
+                  <MovieItem
+                    key={String(tag.id)}
+                    value={tag}
+                    onClick={() => { }}
+                  />
+                ))
+              }
+              <MovieItem
+                isnew
+                placeholder="Novo marcador"
+                value={newTag}
+                onChange={(e) => setNewTag(e.target.value)}
+                onClick={handleAddTag}
+              />
 
             </div>
           </Section>
