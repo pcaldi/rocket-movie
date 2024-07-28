@@ -8,7 +8,7 @@ import { Button } from "../../components/Button"
 import { BackgroundImage, Container, Form } from "./styles";
 import { Link } from "react-router-dom";
 
-import { useAuth } from "../../hook/auth";
+import { useAuth } from "../../hooks/auth";
 
 export function SignIn() {
   const [email, setEmail] = useState("");

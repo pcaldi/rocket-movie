@@ -31,7 +31,7 @@ function AuthProvider({ children }) {
       if (error.response) {
         alert(error.response.data.message);
       } else {
-        alert('Ocorreu um erro ao fazer login. Tente novamente');
+        alert('Ocorreu um erro ao fazer login. Tente novamente!');
       }
     }
   }
@@ -44,13 +44,16 @@ function AuthProvider({ children }) {
   }
 
   useEffect(() => {
-    const user = JSON.parse(localStorage.getItem("@rocketmovies:user"));
+    const user = localStorage.getItem("@rocketmovies:user");
     const token = localStorage.getItem("@rocketmovies:token");
 
     if (user && token) {
       api.defaults.headers['Authorization'] = `Bearer ${token}`;
 
-      setData({ user, token });
+      setData({
+        user: JSON.parse(user),
+        token
+      });
     }
   }, [])
 
