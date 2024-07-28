@@ -1,6 +1,10 @@
 import { Container, Brand, Profile, Logout } from "./styles";
 
-import { LuSearch } from "react-icons/lu"
+import { LuSearch } from "react-icons/lu";
+
+import { api } from "../../services/api";
+
+import avatarPlaceholder from "../../assets/placeholder_profile.png";
 
 import { Input } from "../Input";
 import { ButtonText } from "../ButtonText";
@@ -12,6 +16,8 @@ import { useNavigate } from "react-router-dom";
 export function Header() {
 
   const { signOut, user } = useAuth();
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
 
   const navigate = useNavigate();
 
@@ -42,8 +48,8 @@ export function Header() {
 
         </div>
         <img
-          src="https://github.com/pcaldi.png"
-          alt="Foto do usuário"
+          src={avatarUrl}
+          alt={user.name}
         />
       </Profile>
 
