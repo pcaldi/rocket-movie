@@ -10,35 +10,25 @@ export const Container = styled.div`
   "header"
   "content";
 
-
-> main {
-    max-width: 1137px;
-
-    margin: 0 auto;
+  > main {
 
     grid-area: content;
     overflow-y: auto;
+
     padding-right: 6px;
 
-
-    &::-webkit-scrollbar {
-      width: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.COLORS.PINK};
-      border-radius: 8px;
-    }
+    width: 100%;
+    max-width: 1121px;
+    margin: 48px auto;
 
   }
 
   header {
-    width: 100%;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0;
+    margin-top: 50px;
 
     > h1 {
       font-weight: 400;
@@ -48,5 +38,10 @@ export const Container = styled.div`
 `;
 
 export const Content = styled.div`
-  width: 100%;
+  margin-top: 40px;
+
+  :hover {
+    filter: brightness(0.9);
+  }
+
 `;

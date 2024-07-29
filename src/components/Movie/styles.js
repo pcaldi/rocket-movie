@@ -2,15 +2,19 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   width: 100%;
-  height: 220px;
 
   background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
 
-  border-radius: 10px;
+  border-radius: 16px;
 
-  padding: 24px;
-  margin: 24px 0;
+  margin-bottom: 24px;
 
+  display: flex;
+  padding: 32px;
+  flex-direction: column;
+  gap: 15px;
+
+  cursor: pointer;
 
   .top {
     display: flex;
@@ -29,7 +33,6 @@ export const Container = styled.div`
     > p {
       max-height: 53px;
 
-      margin-top: 12px;
       text-align: justify;
       line-height: 18px;
 
@@ -41,11 +44,13 @@ export const Container = styled.div`
       display: -webkit-box;
       -webkit-line-clamp: 3;
       -webkit-box-orient: vertical;
+
+      white-space: normal;
     }
   }
 
 
   > footer {
-    margin-top: 24px;
+    margin-top: 20px;
   }
 `;

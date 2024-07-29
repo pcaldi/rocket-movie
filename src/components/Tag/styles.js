@@ -7,6 +7,6 @@ export const Container = styled.span`
   margin-right: 6px;
   font-weight: 400;
 
-  color: ${({ theme }) => theme.COLORS.GRAYS_100};
-  background: ${({ theme }) => theme.COLORS.BACKGROUND_600};
+  color: ${({ theme }) => theme.COLORS.WHITE};
+  background: ${({ theme }) => theme.COLORS.BACKGROUND_500}
 `;

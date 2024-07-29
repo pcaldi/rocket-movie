@@ -7,33 +7,28 @@ export const Container = styled.div`
   display: grid;
   grid-template-rows: 116px auto;
   grid-template-areas:
-  "header"
-  "content";
+    "header"
+    "content";
 
 
 > main {
-    max-width: 1137px;
-    max-height: 537px;
-    margin: 0 auto;
-    padding: 40px 106px 156px 123px;
-
     grid-area: content;
     overflow-y: auto;
 
-    &::-webkit-scrollbar {
-      width: 8px;
-      height: 8px;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background-color: ${({ theme }) => theme.COLORS.PINK};
-      border-radius: 8px;
-    }
+    max-width: 1137px;
+    margin: 48px auto;
 
   }
 
    header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     margin-bottom: 24px;
+
+    > div {
+      width: 200px;
+    }
   }
 `;
 
@@ -68,6 +63,7 @@ export const Info = styled.div`
       margin-right: 6px;
       width: 16px;
       height: 16px;
+      border-radius: 50%;
     }
   }
 
@@ -79,6 +75,7 @@ export const Info = styled.div`
 
      svg {
        margin-right: 6px;
+       color: ${({ theme }) => theme.COLORS.PINK};
      }
   }
 
