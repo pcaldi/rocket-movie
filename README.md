@@ -9,7 +9,7 @@
 
 - A aplicação conta com páginas de login, cadastro, visualizar filme, perfil e cadastrar filme.
 
-<div>
+<div align="center">
   <img alt="Home" src="./src/assets/home.png" width="70%">
   <img alt="New" src="./src/assets/new.png" width="70%">
   <img alt="Preview" src="./src/assets/preview.png" width="70%">
