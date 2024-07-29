@@ -1,5 +1,9 @@
 import { useState } from "react"
 
+
+import { format } from "date-fns";
+import { ptBR } from "date-fns/locale";
+
 import { Header } from "../../components/Header"
 import { ButtonText } from "../../components/ButtonText"
 import { Input } from "../../components/Input"
@@ -36,11 +40,15 @@ export function New() {
   }
 
   async function handleNewNote() {
+    const dateNow = new Date();
+    const formattedDate = format(dateNow, "dd/MM/yy 'às' HH:mm", { locale: ptBR });
+
     const newMovie = {
       title,
       description,
-      rating: String(rating),
+      rating/* : String(rating) */,
       tags,
+      createdAt: formattedDate,
     }
 
     if (!title || !description || !rating) {
