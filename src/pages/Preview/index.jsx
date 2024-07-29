@@ -1,16 +1,60 @@
-import { Container, Content, Description, Info, Section } from "./styles"
+/* eslint-disable react-hooks/exhaustive-deps */
+import { useState, useEffect } from "react";
 
-import { Tag } from "../../components/Tag"
-import { Input } from "../../components/Input"
-import { Header } from "../../components/Header"
-import { Rating } from "../../components/Rating"
-import { ButtonText } from "../../components/ButtonText"
+import { Container, Content, Description, Info, Section } from "./styles";
 
-import { LuArrowLeft, LuClock } from "react-icons/lu"
+import { Tag } from "../../components/Tag";
+import { Input } from "../../components/Input";
+import { Header } from "../../components/Header";
+import { Rating } from "../../components/Rating";
+import { ButtonText } from "../../components/ButtonText";
+import { Button } from "../../components/Button";
 
+import avatarPlaceholder from "../../assets/placeholder_profile.png";
+
+import { LuArrowLeft, LuClock } from "react-icons/lu";
+
+import { useParams, useNavigate } from "react-router-dom";
+
+import { api } from "../../services/api";
+
+import { useAuth } from "../../hooks/auth";
 
 
 export function Preview() {
+  const [data, setData] = useState(null);
+
+  const { user } = useAuth();
+
+  const navigate = useNavigate();
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+  const params = useParams();
+
+  function handleBack() {
+    navigate(-1);
+  }
+
+  async function handleDeleteMovie() {
+    const confirmDeleted = window.confirm("Tem certeza que deseja excluir o filme?");
+
+    if (confirmDeleted) {
+      await api.delete(`/notes/${params.id}`);
+      navigate(-1);
+    }
+  }
+
+
+  useEffect(() => {
+    async function fetchMovies() {
+      const response = await api.get(`/notes/${params.id}`);
+      setData(response.data);
+    }
+    fetchMovies();
+
+  }, []);
+
   return (
     <Container>
       <Header>
@@ -20,47 +64,60 @@ export function Preview() {
         />
       </Header>
 
-      <main>
-        <header>
-          <ButtonText icon={LuArrowLeft} title="Voltar" />
+      {
+        data &&
+        <main>
+          <header>
+            <ButtonText
+              icon={LuArrowLeft}
+              title="Voltar"
+              onClick={handleBack}
+            />
+            <div>
+              <Button
+                title="Excluir Filme"
+                onClick={handleDeleteMovie}
+              />
+            </div>
+          </header>
+          <Content>
+            <h1>{data.title}</h1>
+            <Rating isBigSize grade={data.rating} />
+          </Content>
 
-        </header>
-        <Content>
-          <h1>Gladiador</h1>
-          <Rating isBigSize grade={4} />
-        </Content>
+          <Info>
+            <p>
+              <img src={avatarUrl} alt={user.name} />
+              Por {user.name}
+            </p>
+            <span>
+              <LuClock />
+              {data.created_at}
+            </span>
+          </Info>
 
-        <Info>
-          <p>
-            <img src="https://github.com/pcaldi.png" alt="Foto do usuário" />
-            Por Paulo Ricardo
-          </p>
-          <span>
-            <LuClock />
-            14/07/24 às 13:00
-          </span>
-        </Info>
+          {data.tags &&
+            <Section>
+              {data.tags.map((tag) => (
+                <Tag
+                  key={String(tag.id)}
+                  title={tag.name}
+                />
+              ))}
+            </Section>
+          }
 
-        <Section>
-          <Tag title="Ação" />
-          <Tag title="Drama" />
-          <Tag title="Suspense" />
-          <Tag title="Ficção" />
-        </Section>
+          <Description>
+            <p>
+              {data.description}
+            </p>
 
-        <Description>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut possimus commodi magnam iure suscipit iste perspiciatis distinctio alias dolorem ipsam excepturi libero, labore earum quia consequuntur modi expedita quibusdam.
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic consectetur praesentium, temporibus voluptates autem aperiam deleniti pariatur facere quo sint architecto dolor vero optio dolorem asperiores atque nesciunt cumque totam?
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime voluptatem harum neque esse, iusto labore cumque. Corrupti maxime doloribus facere, quibusdam natus explicabo recusandae nisi dignissimos, consequuntur aperiam officia dicta?
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius laboriosam corrupti nesciunt iure voluptatibus optio voluptates exercitationem asperiores deserunt possimus placeat assumenda, sunt maxime eveniet error necessitatibus aperiam voluptatem minima?
-          </p>
-
-        </Description>
+          </Description>
 
 
 
-      </main>
+        </main>
+      }
     </Container>
   )
 }
