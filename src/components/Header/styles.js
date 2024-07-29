@@ -13,7 +13,7 @@ export const Container = styled.div`
   display: flex;
   align-items:center ;
   justify-content: space-between;
-  padding: 30px 0;
+  padding: 30px 12px;
   gap: 64px;
 
 `;
@@ -65,5 +65,5 @@ export const Logout = styled.div`
   display: flex;
   position: absolute;
   top: 70px;
-  right: 77px;
+  right: 88px;
 `;
