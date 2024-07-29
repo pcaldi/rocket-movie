@@ -16,6 +16,10 @@ export const Container = styled.div`
     border: none;
     background: none;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     svg {
       color: ${({ theme }) => theme.COLORS.PINK};
       font-size: 20px;
@@ -25,9 +29,8 @@ export const Container = styled.div`
 
 
   > input {
-    width: 100%;
+    max-width: 150px;
     height: 56px;
-
 
     padding: 16px;
     border: none;

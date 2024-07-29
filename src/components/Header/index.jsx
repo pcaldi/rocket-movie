@@ -1,31 +1,59 @@
-import { Container, Brand, Profile } from "./styles";
+/* eslint-disable react/prop-types */
+import { Container, Brand, Profile, Logout } from "./styles";
 
-import { LuSearch } from "react-icons/lu"
+import { api } from "../../services/api";
 
-import { Input } from "../Input";
+import avatarPlaceholder from "../../assets/placeholder_profile.png";
 
+import { ButtonText } from "../ButtonText";
 
-export function Header() {
+import { useAuth } from '../../hooks/auth';
+
+import { useNavigate } from "react-router-dom";
+
+export function Header({ children }) {
+
+  const { signOut, user } = useAuth();
+
+  const avatarUrl = user.avatar ? `${api.defaults.baseURL}/files/${user.avatar}` : avatarPlaceholder;
+
+  const navigate = useNavigate();
+
+  function handleSignOut() {
+    const confirm = window.confirm("Tem certeza que deseja sair?");
+
+    if (confirm) {
+      navigate("/")
+      signOut();
+    }
+  }
+
   return (
     <Container>
       <Brand>
         <h1>RocketMovies</h1>
       </Brand>
 
-      <Input icon={LuSearch} placeholder="Pesquise pelo título" />
-
+      {children}
 
       <Profile to="/profile">
         <div className="profile">
 
-          <p>Paulo Ricardo</p>
-          <a href="#">Sair</a>
+          <p>{user.name}</p>
+
         </div>
         <img
-          src="https://github.com/pcaldi.png"
-          alt="Foto do usuário"
+          src={avatarUrl}
+          alt={user.name}
         />
       </Profile>
+
+      <Logout>
+        <ButtonText
+          title="Sair"
+          onClick={handleSignOut}
+        />
+      </Logout>
 
 
     </Container>

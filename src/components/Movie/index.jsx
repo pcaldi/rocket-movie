@@ -26,7 +26,10 @@ export function Movie({ data, ...rest }) {
         <footer>
           {
             data.tags.map(tag => (
-              <Tag key={tag.id} title={tag.name} />
+              <Tag
+                key={String(tag.id)}
+                title={tag.name}
+              />
             ))
           }
         </footer>

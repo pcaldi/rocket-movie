@@ -6,6 +6,22 @@ export default createGlobalStyle`
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    border-radius: 8px;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: ${({ theme }) => theme.COLORS.PINK};
+    border-radius: 10px;
+  }
+
 }
 
 body {
@@ -13,6 +29,7 @@ body {
   color: ${({ theme }) => theme.COLORS.WHITE};
 
   -webkit-font-smoothing: antialiased;
+
 }
 
 body, input, button, textarea {
@@ -34,8 +51,5 @@ button, a {
 button:hover, a:hover {
   filter: brightness(0.9);
 }
-
-
-
 
 `;
