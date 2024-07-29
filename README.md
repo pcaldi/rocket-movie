@@ -34,7 +34,7 @@ A aplicação RocketMovies está disponível para utilização [aqui](https://pc
 - Filtrar filmes;
 - Mostrar detalhes do filme;
 - Excluir filme;
-- Logout.
+- Logout;
 
 ## 🚀 Tecnologias
 
@@ -45,7 +45,6 @@ Este projeto foi desenvolvido com as seguintes tecnologias:
 - Styled Components;
 - React Icons;
 - React Router;
-- Axios.
 
 ## 🎡 Rodando o projeto localmente
 
