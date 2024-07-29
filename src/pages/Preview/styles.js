@@ -15,6 +15,7 @@ export const Container = styled.div`
     grid-area: content;
     overflow-y: auto;
 
+    width: 100%;
     max-width: 1137px;
     margin: 48px auto;
 
